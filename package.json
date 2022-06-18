@@ -21,6 +21,7 @@
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.7.11",
     "@types/webfontloader": "^1.0.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vuetify/vite-plugin": "^1.0.0-alpha.0",
