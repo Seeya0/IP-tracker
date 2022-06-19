@@ -6,33 +6,37 @@
     <section>
       <div class="flex flex-col">
         <h3 class="text-xs mb-2 uppercase">IP Address</h3>
-        <span class="text-2xl">8.8.8.8</span>
+        <span class="text-2xl">{{ IpInfo.address }}</span>
       </div>
     </section>
 
     <section>
       <div class="flex flex-col">
         <h3 class="text-xs mb-2 uppercase">Location</h3>
-        <span class="text-2xl">Tokyo</span>
+        <span class="text-2xl">{{ IpInfo.state }}</span>
       </div>
     </section>
 
     <section>
       <div class="flex flex-col">
         <h3 class="text-xs mb-2 uppercase">Timezone</h3>
-        <span class="text-2xl">UTC -07:00</span>
+        <span class="text-2xl">{{ IpInfo.timezone }}</span>
       </div>
     </section>
 
     <section>
       <div class="flex flex-col">
         <h3 class="text-xs mb-2 uppercase">ISP</h3>
-        <span class="text-2xl">Google</span>
+        <span class="text-2xl">{{ IpInfo.isp }}</span>
       </div>
     </section>
 
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  props: ['IpInfo']
+})
 </script>
