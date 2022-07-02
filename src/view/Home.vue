@@ -14,6 +14,7 @@
               class="flex-1 py-3 px-2 rounded-tl-md rounded-bl-md bg-white focus:outline-none"
               type="text"
               placeholder="Search for any IP address or leave empty to get your ip info"
+              @keyup.enter="getIpInfo"
             />
             <i
               class="fas fa-chevron-right cursor-pointer bg-black text-white px-4 rounded-tr-md rounded-br-md flex items-center"
@@ -47,7 +48,7 @@ export default defineComponent({
   name: "Home",
   components: { IPInfo },
   setup() {
-    let myMap;
+    let myMap: leaflet.Map | leaflet.LayerGroup<any>;
     const queryIp = ref('');
     const IpInfo = ref<Object>('');
 
