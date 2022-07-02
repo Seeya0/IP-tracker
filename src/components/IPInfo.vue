@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute -bottom-64 lg:-bottom-20 lg:left-[28em] flex flex-col lg:flex-row max-w-screen-md bg-white gap-x-12 gap-y-4 px-8 pt-8 pb-12 mx-8 rounded-md"
+    class="absolute -bottom-64 lg:-bottom-20 flex flex-col lg:flex-row max-w-screen-md bg-white gap-x-12 gap-y-4 px-6 pt-8 pb-12 mx-8 rounded-md"
   >
 
     <section>
