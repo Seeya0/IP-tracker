@@ -4,31 +4,31 @@
   >
 
     <section>
-      <div class="flex flex-col">
-        <h3 class="text-xs mb-2 uppercase">IP Address</h3>
-        <span class="text-2xl">{{ IpInfo.address }}</span>
-      </div>
+      <Result
+        topic="Ip Address"
+        :result="IpInfo.address"
+      />
     </section>
 
     <section>
-      <div class="flex flex-col">
-        <h3 class="text-xs mb-2 uppercase">Location</h3>
-        <span class="text-2xl">{{ IpInfo.state }}</span>
-      </div>
+      <Result
+        topic="Location"
+        :result="IpInfo.state"
+      />
     </section>
 
     <section>
-      <div class="flex flex-col">
-        <h3 class="text-xs mb-2 uppercase">Timezone</h3>
-        <span class="text-2xl">{{ IpInfo.timezone }}</span>
-      </div>
+      <Result
+        topic="Timezone"
+        :result="IpInfo.timezone"
+      />
     </section>
 
     <section>
-      <div class="flex flex-col">
-        <h3 class="text-xs mb-2 uppercase">ISP</h3>
-        <span class="text-2xl">{{ IpInfo.isp }}</span>
-      </div>
+      <Result
+        topic="ISP"
+        :result="IpInfo.isp"
+      />
     </section>
 
   </div>
@@ -36,7 +36,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Result from './Result.vue'
 export default defineComponent({
-  props: ['IpInfo']
+  props: ["IpInfo"],
+  components: { Result }
 })
 </script>
