@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../view/Home.vue'
+import NotFoundError from '../components/NotFoundError.vue'
 
 const routes = [
   {
@@ -9,7 +10,12 @@ const routes = [
     meta: {
       title: 'IP Address Tracker'
     }
-  }
+  },
+  {
+    path: '/error',
+    name: 'NotFoundError',
+    component: NotFoundError,
+  },
 ]
 
 const router = createRouter({
